@@ -1,0 +1,220 @@
+/* Estilos generales */
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Menú de navegación */
+.menu {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    z-index: 50;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #0c0c0c;
+    padding: 8px 10px;
+    margin: 0 15px;
+    border: 2px solid #5eda87;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: #333;
+    color: #5eda87;
+    border-color: #0c0c0c;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 150px;
+    background-image: url(Images/Header.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.logo img {
+    width: 100px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.slogan h1 {
+    font-size: x-large;
+    margin: 0;
+    text-align: center;
+    padding-top: 40px;
+    color: rgb(83, 177, 116);
+}
+
+/* Main */
+main {
+    padding: 20px;
+}
+
+/* Online Section */
+.online {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.online img {
+    width: 200px;
+    cursor: pointer;
+}
+
+.online p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Recuadro emergente */
+.info-recuadro {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    border: 2px solid black;
+    font-size: 1.2rem;
+    text-align: left;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Mostrar el recuadro cuando el checkbox está activado */
+#toggle-info:checked ~ .info-recuadro {
+    display: block;
+}
+
+/* Capa de fondo para cerrar el recuadro al hacer clic fuera */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 500; /* Capa detrás del recuadro */
+}
+
+/* Mostrar la capa de fondo cuando el checkbox está activado */
+#toggle-info:checked ~ .overlay {
+    display: block;
+}
+
+/* Contenedor para alinear las imágenes en línea */
+.images-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Secciones individuales de imágenes */
+.online, .perdida {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Imágenes */
+.online img, .perdida img {
+    width: 200px;
+    cursor: pointer;
+}
+
+.online p, .perdida p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Recuadro emergente */
+.info-recuadro {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    border: 2px solid black;
+    font-size: 1.2rem;
+    text-align: left;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Mostrar el recuadro cuando el checkbox está activado */
+#toggle-info-online:checked ~ .info-recuadro,
+#toggle-info-perdida:checked ~ .info-recuadro {
+    display: block;
+}
+
+/* Capa de fondo para cerrar el recuadro al hacer clic fuera */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 500;
+}
+
+/* Mostrar la capa de fondo cuando el checkbox está activado */
+#toggle-info-online:checked ~ .overlay,
+#toggle-info-perdida:checked ~ .overlay {
+    display: block;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #a8e6a8;
+    color: #0c0c0c;
+    text-align: center;
+    padding: 20px;
+}
+
+footer img {
+    width: 2.5rem;
+    margin: 10px;
+}
